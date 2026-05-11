@@ -4,6 +4,10 @@ on:
   release:
     types: [ created ]
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 env:
   NODE_VERSION: 24
   EMSDK_VERSION: 3.1.26
@@ -32,5 +36,3 @@ jobs:
       working-directory: webassembly
     - run: npm publish
       working-directory: webassembly
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
