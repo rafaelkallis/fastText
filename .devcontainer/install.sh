@@ -9,6 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # https://github.com/matt9ucci/vscode-devcontainers/blob/b280b5a2547ae2bd08ea232d73d5f24a6022f0f6/devcontainers/emscripten/Dockerfile
 EMSDK=$HOME/emsdk
 EMSDK_VERSION=3.1.26
+# EMSDK_VERSION=3.1.74
 git clone --depth 1 https://github.com/emscripten-core/emsdk.git $EMSDK
 $EMSDK/emsdk install $EMSDK_VERSION
 $EMSDK/emsdk activate $EMSDK_VERSION
